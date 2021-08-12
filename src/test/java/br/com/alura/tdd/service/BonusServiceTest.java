@@ -36,4 +36,13 @@ class BonusServiceTest {
 		//then
 		assertEquals(new BigDecimal("250.00"), bonus);
 	}
+	
+	@Test
+	void mustReturnTheCalculatedBonusIfTheSalaryIsExactlyTenThousand() {
+		//when
+		BigDecimal bonus = bonusService.calcularBonus(new Funcionario("João", LocalDate.now(), new BigDecimal("10000")));
+		
+		//then
+		assertEquals(new BigDecimal("1000.00"), bonus);
+	}
 }
