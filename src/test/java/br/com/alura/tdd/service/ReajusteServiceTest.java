@@ -40,4 +40,13 @@ class ReajusteServiceTest {
 		assertEquals(new BigDecimal("1150.00"), funcionario.getSalario());
 	}
 	
+	@Test
+	void mustReadjustTheSalaryIfTheReadjustmentIsTwentyPercent() {
+		//when
+		reajusteService.concedeReajuste(funcionario, Desempenho.OTIMO);
+	
+		//then
+		assertEquals(new BigDecimal("1200.00"), funcionario.getSalario());
+	}
+	
 }
