@@ -24,28 +24,28 @@ class ReajusteServiceTest {
 
 	@Test
 	void mustReadjustTheSalaryIfTheReadjustmentIsThreePercent() {
-		//when
+		// when
 		reajusteService.concedeReajuste(funcionario, Desempenho.A_DESEJAR);
 	
-		//then
+		// then
 		assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
 	}
 	
 	@Test
 	void mustReadjustTheSalaryIfTheReadjustmentIsFifteenPercent() {
-		//when
+		// when
 		reajusteService.concedeReajuste(funcionario, Desempenho.BOM);
 	
-		//then
+		// then
 		assertEquals(new BigDecimal("1150.00"), funcionario.getSalario());
 	}
 	
 	@Test
 	void mustReadjustTheSalaryIfTheReadjustmentIsTwentyPercent() {
-		//when
+		// when
 		reajusteService.concedeReajuste(funcionario, Desempenho.OTIMO);
 	
-		//then
+		// then
 		assertEquals(new BigDecimal("1200.00"), funcionario.getSalario());
 	}
 	
